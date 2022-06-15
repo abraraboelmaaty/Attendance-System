@@ -1,0 +1,425 @@
+/* reset negative and default  stayle */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* end reset */
+
+/* set variables and main colors */
+:root{
+/*bg||show*/--mainColor:#D3DEDC; 
+    --borderColor:#7C99AC;
+    --textColor:#92A9BD;
+    --optionalColor:#FFEFEF;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+input:focus{
+    outline: none;
+}
+/* end variable */
+
+/* start registration page */
+h1{
+    text-align: center;
+    text-transform: capitalize;
+    color: var(--textColor);
+    margin-top: 3rem;
+}
+.maindiv{
+    text-align: center;
+    box-shadow: 5px 5px 15px var(--mainColor);
+    width: 70%;
+    margin: 10vh auto;
+    height: 43rem;
+    display: flex;
+    border-radius:20px;
+    text-transform: capitalize;
+}
+
+#sec1{
+   width: 65%;
+   margin: 2% auto;
+}
+#sec1>h2{
+    margin-top: 5%;
+    margin-bottom: 7%;
+}
+#sec1>form{
+    display: grid;
+    height: 90%;
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; 
+    gap: 0px 30px; 
+    grid-template-areas: "box1 box2"
+                         "box3 box4"
+                         "box5 box6"
+                         "box7 box8"
+                         "box9 box10"
+                         "box11 box12"
+                         "box13 box13"
+                         "box14 box14"
+                         "box15 box15"
+                         "box16 box16"
+                         "box17 box17"
+                         "box18 box18";
+}
+#sec1 .lab1{
+    grid-area: box1;
+}
+#sec1 .lab2{
+    grid-area: box2;
+}
+#sec1 #fname{
+    grid-area: box3;
+}
+#sec1 #lname{
+    grid-area: box4;
+}
+#sec1 #fnameError{
+    grid-area: box5;
+}
+#sec1 #lnameError{
+    grid-area: box6;
+}
+#sec1 .lab3{
+    grid-area: box7;
+}
+#sec1 .lab4{
+    grid-area: box8;
+}
+#sec1 #email{
+    grid-area: box9;
+}
+#sec1 #age{
+    grid-area: box10;
+}
+#sec1 #emailError{
+    grid-area: box11;
+}
+#sec1 #ageError{
+    grid-area: box12;
+}
+#sec1 .lab5{
+    grid-area: box13;
+    margin-right: 451px;
+}
+#sec1 #address{
+    grid-area: box14;
+}
+
+#sec1 #addressError{
+    grid-area: box15;
+}
+#sec1 #submit{
+    grid-area: box16;
+}
+#sec1 #submitError{
+    grid-area: box17;
+}
+#sec1 .para1{
+    padding-bottom: 87px;
+    grid-area: box18;
+}
+#sec1 input{
+    padding: 15px;
+    outline: none;
+    margin: 0px 20px;
+    margin-top: 1rem;
+    border: 1px solid var(--borderColor);
+    border-radius: 21px;
+    box-shadow: 3px 3px 5px var(--mainColor);
+}
+
+#sec1 label{
+    margin-right: 138px;
+}
+#sec1 input[type=submit]{
+    width: 40%;
+    padding: 15px;
+    margin: 0px auto;
+    margin-bottom: 13px;
+}
+#sec1 span{
+    color: red;
+    display: none;  
+}
+
+#sec1 a{
+    color: var(--textColor);
+}
+#aside{
+    width: 35%;
+    display: flex;
+    background-color: var(--mainColor);
+    flex-direction: column;
+    justify-content: center;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+#aside>p{
+    margin-top: 15%;
+    color: var(--textColor);
+    line-height: 1.6rem;
+}
+@media screen and (max-width:1318px){
+    #aside{
+        display: none;
+    }
+    #sec1{
+        width: 100%;
+    }
+
+}
+@media screen and (max-width:876px){
+ 
+    #sec1 label{
+        display: none;
+    }
+    #sec1>form{
+        grid-template-areas: 
+                            "box3 box3"
+                            "box5 box5"
+                            "box4 box4"
+                            "box6 box6"
+                            "box9 box9"
+                            "box11 box11"
+                            "box10 box10"
+                            "box12 box12"
+                            "box13 box13"
+                            "box14 box14"
+                            "box15 box15"
+                            "box16 box16"
+                            "box17 box17"
+                            "box18 box18";
+    }
+   
+  
+}
+
+
+/* end registration form */
+
+/* stert login page */
+.login{
+    height: 34rem;
+    width: 50%;
+    background-color: var(--mainColor);
+    margin: 3rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    box-shadow: 5px 5px 15px var(--mainColor);
+}
+.login>form>input{
+    margin: 10px;
+    width: 400px;
+    border: 1px solid var(--borderColor);
+    border-radius: 20px;
+    padding: 8px;
+    box-shadow: 3px 3px 5px var(--mainColor);
+    
+}
+.login>form>label{
+    margin-left: 20px;
+}
+.login>h2{
+    margin-bottom: 100px;
+    text-transform: capitalize;
+    
+}
+.login p {
+    margin-top: 30px;
+    text-align: center;
+    text-transform: capitalize;
+}
+.login a{
+    color: var(--textColor);
+}
+@media screen and (max-width:876px){
+    .login{
+        width: 55%;
+    }
+    .login>form>input{
+        width:250px;
+    }
+}
+#message{
+    display: none;
+}
+/* end login page */
+
+/* start mainLogin */
+#mainLogin{
+    width: 50%;
+    margin: 10rem auto;
+    height: 10rem;
+    background-color: var(--mainColor);
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px var(--mainColor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#mainLogin .btn{
+    width: 7rem;
+    margin-left: 20px;
+    padding: 13px;
+    border: none;
+    border-radius: 5px;
+    color: var(--textColor);
+}
+/* end mainLogin */
+
+/* start security profile */
+#att_div,#emp_div{
+    width: 50%;
+    margin: 4rem auto;
+    height:15rem;
+    background-color: var(--mainColor);
+    box-shadow: 5px 5px 10px var(--mainColor);
+    border-radius: 15px;
+}
+#att_div #sec_pro_form{
+  display: grid; 
+  grid-template-columns: 0.6fr 1.4fr; 
+  grid-template-rows: 1fr 1fr; 
+  gap: 70px 0; 
+  grid-template-areas: 
+    "box1 box2"
+    "box3 box4"; 
+
+  padding: 3rem;  
+}
+#att_div #box1{
+    grid-area: box1;
+    margin-top: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: var(--textColor);
+}
+#att_div #box2{
+    grid-area: box2;
+    padding: 10px;
+    border: 1px solid var(--borderColor);
+    border-radius: 15px; 
+}
+#att_div #box3{
+    grid-area: box3;
+    width: 100%;
+   
+}
+#att_div #box4{
+    grid-area: box4;
+    width: 50%;
+}
+
+#att_div #box3,#box4{
+    color: var(--textColor);
+    text-transform: capitalize;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border: 2px solid var(--borderColor);
+    border-radius: 15px;
+    padding: 10px;
+    
+    margin-left: 30%; 
+}
+@media screen and (max-width:900px){
+    #box1{
+        display: none;
+    }
+    #att_div #sec_pro_form{
+        grid-template-areas: 
+    "box2 box2"
+    "box3 box4"; 
+    }
+    #att_div{
+        width: 90vw;
+    }
+    #box4{
+        width: 100%;
+    }
+}
+/* end security profile */
+
+/* start emp profile */
+#emp_div{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#emp_div button{
+    padding: 10px;
+    width: 100%;
+    border: 2px solid var(--borderColor);
+    border-radius: 10px;
+}
+/* end emp profile */
+
+/* start emp reports */
+#mytable{
+    width: 90%;
+    margin: 10% auto;
+    border:1px solid var(--borderColor);
+    border-collapse:collapse;
+    text-align:center;
+}
+th,td{
+    border:1px solid var(--borderColor);
+    padding:10px;
+    }
+
+/* end emp reports */
+/* start emp_brief for admin */
+#briefDive{
+    display: flex ;
+    justify-content: space-evenly ;
+    align-items: center ;
+    height: 30rem ;
+    flex-wrap: wrap ;
+}
+#briefDive input[type = text]{
+    width: 90%;
+    border: 2px solid var(--borderColor);
+    border-radius: 20px;
+    padding: 10px;
+}
+#briefDive input[type = button]{
+    width: 30%;
+    border-radius: 10px;
+    background-color: var(--mainColor);
+    color: var(--textColor);
+    padding: 10px;
+    border: 0;
+}
+/* end emp_brief for admin */
+
+/*start home */
+/* features */
+
+.f-header{
+  
+    color: var(--textColor);
+}
+.features h3{
+    color: var(--textColor);
+}
+.f-icon{
+    margin: 40%;
+}
+.carousel-item>img{
+    height: 100vh;
+}
+/* end home */
